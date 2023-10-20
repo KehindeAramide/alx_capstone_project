@@ -1,0 +1,68 @@
+body{
+    flex-direction: row;
+    background-image: url(budget.jpeg);
+    background-size: 1400px;
+    width: 700px;
+    opacity: 1;
+}
+.Income {
+    text-align: center;
+}
+.BUDGET
+{
+    width: 500px;
+    border: solid white;
+    border-width: 3px;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: rgb(174, 174, 188);
+    text-align: center;
+}
+.EXPENSES{
+    width: 500px;
+    border: solid rgb(224, 225, 235);
+    border-width: 3px;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: rgb(183, 236, 236);
+    text-align: center;
+
+}
+.App-container{
+    position: relative;
+}
+table{
+    background-color: #f4bb81;
+    padding: 1.8em 1.2em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+    border-radius: 0.6em;
+    width: 400px;
+}
+
+.outcome-box{
+    display: flex;
+    align-content: center;
+    border: solid rgb(193, 243, 149);
+    border-radius: 20PX;
+    padding: 40px;
+    width: 700px;
+    text-align: center;
+    background-color: solid ghostwhite;
+}
+.outcome-box span {
+    text-align: center;
+    font-weight: 400;
+    margin-right: 100px;
+    padding-right: 50px;
+    padding-inline-start: 5px;
+   
+    
+}
+.outcome-box p {
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    margin-right: 100px;
+    padding-right: 50px;
+    padding-inline-start: 5px;
+}

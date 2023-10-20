@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUDGET TRACKING APP</title>
+    <link rel="stylesheet" href="budgetstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="App-container">
+        <!--Income section-->
+        <div class="Income">
+            <h3>INCOME</h3>
+            <label for="IncomeAmount">Income Entries</label>
+            <input type="number" id="incomeAmount" placeholder="Enter figure">
+            <button id="enterIncome">Post Income</button>
+
+        </div>
+        <!--Budget section-->
+        <div class="BUDGET">
+            <h3>BUDGET</h3>
+            <label for="budgetAmount"> Budget Entries </label>
+            <input type="number" id="budgetAmount" placeholder="Enter figure"><br>
+            <button id="setBudgetButton">set budget</button>
+        </div>
+        <!--Expense section-->
+        <div class="EXPENSES">
+            <h3>Expense Entries</h3>
+            <label for="Item"> Item purchased</label>
+            <input type="text" id="Item" placeholder="Enter Item"><br>
+            <label for="ItemValue"> Item cost </label>
+            <input type="number" id="ItemValue" placeholder="Enter cost"><br>
+            <button id="postExpenseButton">Post</button>
+        </div>
+        <!--Outcome-->
+        <div class="outcome-box">
+            <div>
+                <p> Total Income</p>
+                <span id="Income-Amount">0</span>
+            </div>
+            <div>
+                <p>Total Budget</p>
+                <span id="Budget-Amount">0</span><br>
+            </div>
+            <div>
+                <p>Expenses</p>
+                <span id="expenditure-value">0</span><br>
+            </div>
+            <div>
+                <p>Savings</p>
+                <span id="balance-amount">0</span>
+            </div>
+        </div>
+        <!--Chart section-->
+        <!--Chart section for Expenses and Savings-->
+        <div class="chart-container">
+            <canvas id="expenses-savings-chart" width="200" height="200"></canvas>
+        </div>
+
+        <!--Chart section for Income and Budget-->
+        <div class="chart-container">
+            <canvas id="income-budget-chart" width="200" height="200"></canvas>
+        </div>
+
+
+        <!--Transaction List section-->
+        <div class="transactions">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list">
+                </tbody>
+            </table>
+        </div>
+        <div class="export-section">
+            <button id="export-data">Export Data</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="budgetscript.js"></script>
+</body>
+</html>
