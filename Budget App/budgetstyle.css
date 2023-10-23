@@ -31,6 +31,13 @@ body{
 .App-container{
     position: relative;
 }
+
+.main{
+    display: flex;
+    position: absolute;
+    top: 50px mnbvc;
+    left: 50rem;
+}
 table{
     background-color: #f4bb81;
     padding: 1.8em 1.2em;
