@@ -35,7 +35,7 @@ body{
 .main{
     display: flex;
     position: absolute;
-    top: 50px mnbvc;
+    top: 50px;
     left: 50rem;
 }
 table{
