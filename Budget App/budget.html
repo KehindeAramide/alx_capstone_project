@@ -13,7 +13,7 @@
         <div class="Income">
             <h3>INCOME</h3>
             <label for="IncomeAmount">Income Entries</label>
-            <input type="number" id="incomeAmount" placeholder="Enter figure">
+            <input type="number" id="incomeAmount" placeholder="Enter figure"><br>
             <button id="enterIncome">Post Income</button>
 
         </div>
@@ -57,11 +57,13 @@
 
         <div class="main">
             <div class="chart-container">
+                <h5>Expense Chart</h5>
                 <canvas id="expenses-savings-chart" width="200" height="200"></canvas>
             </div>
     
             <!--Chart section for Income and Budget-->
             <div class="chart-container">
+                <h5>Income Chart</h5>
                 <canvas id="income-budget-chart" width="200" height="200"></canvas>
             </div>
         </div>
@@ -80,10 +82,12 @@
                 <tbody id="transaction-list">
                 </tbody>
             </table>
+
+            <div class="export-section">
+                <button id="export-data">Export Data</button>
+            </div>
         </div>
-        <div class="export-section">
-            <button id="export-data">Export Data</button>
-        </div>
+       
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="budgetscript.js"></script>

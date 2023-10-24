@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function updateSavings() {
-        const savings = totalIncome - totalExpenses;
+        const savings = totalIncome - budget;
         document.getElementById("balance-amount").textContent = savings >= 0 ? savings : 0;
     }
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         editButton.addEventListener("click", function () {
             // Opening a modal or form to edit the transaction details
             // Update the transaction and UI after editing
-            alert("Edit functionality is a placeholder. Implement your edit logic here.");
+            alert("Edit functionality is a placeholder. Implement edit logic here.");
         });
 
         transactionList.appendChild(row);
@@ -96,13 +96,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.expensesSavingsPie) {
             window.expensesSavingsPie.destroy();
         }
+        //let isExceededBudget = totalExpenses >= budget;
+        //if (isExceededBudget) {
+            //Alert when totalExpenses exceed or equal budget
+            //alert("Budget exceeded")
+        //}
 
         window.expensesSavingsPie = new Chart(expensesSavingsCtx, {
             type: "pie",
             data: {
-                labels: ["Expenses", "Savings"],
+                labels: ["Expenses", "Balance"],
                 datasets: [{
-                    data: [totalExpenses, totalIncome - totalExpenses],
+                    data: [totalExpenses, budget - totalExpenses],
                     backgroundColor: ["#FF6384", "#36A2EB"],
                     hoverBackgroundColor: ["#FF6384", "#36A2EB"]
                 }]
@@ -122,9 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
         window.incomeBudgetPie = new Chart(incomeBudgetCtx, {
             type: "pie",
             data: {
-                labels: ["Income", "Budget"],
+                labels: ["Budget", "Savings"],
                 datasets: [{
-                    data: [totalIncome, budget],
+                    data: [budget, totalIncome - budget],
                     backgroundColor: ["#4CAF50", "#FFC107"],
                     hoverBackgroundColor: ["#4CAF50", "#FFC107"]
                 }]
